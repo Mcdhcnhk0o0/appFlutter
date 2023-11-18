@@ -1,3 +1,4 @@
+import 'package:app_flutter/flutter_fragment.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(const MyApp());
@@ -22,6 +23,10 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+        "fragment": (_) {return const FlutterFragment();},
+        "home": (_) {return const MyHomePage(title: "home");},
+      },
     );
   }
 }
