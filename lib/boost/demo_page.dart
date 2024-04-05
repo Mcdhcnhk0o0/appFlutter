@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+
+
+class DemoPage extends StatefulWidget {
+
+  const DemoPage({super.key});
+
+  @override
+  State<StatefulWidget> createState() => _DemoPageState();
+
+}
+
+
+class _DemoPageState extends State<DemoPage> {
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: Center(
+        child: Text("this page represents url flutter://demo1")
+      ),
+    );
+  }
+
+}
