@@ -12,12 +12,19 @@ dependencies:
   flutter:
     sdk: flutter
 
+  get:
+  dio: 5.4.0
+  logger: 2.2.0
+  web_socket_channel: 2.4.0
   cupertino_icons: ^1.0.2
 
   flutter_boost:
     git:
       url: 'https://github.com/alibaba/flutter_boost.git'
       ref: '4.5.3'
+
+  base:
+    path: ./lib/plugin/base
 
 
 dev_dependencies:
