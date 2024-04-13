@@ -9,14 +9,14 @@ import 'module.dart';
 
 void main() {
 
-  // Plugin注册
-  NativePlugin.init();
-
   // 分Module注册
   registerModule();
 
   // Boost Binding
   CustomFlutterBinding();
+
+  // Plugin注册
+  NativePlugin.init();
 
   // 分Module初始化
   MultiModule.initialize();

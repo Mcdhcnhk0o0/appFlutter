@@ -23,7 +23,7 @@ abstract class BasePlatform extends PlatformInterface {
 
   Future<String?> getUserToken();
 
-  Future<int?> getUserId();
+  Future<String?> getUserId();
 
   Future<String?> getBaseUrlSetting();
 

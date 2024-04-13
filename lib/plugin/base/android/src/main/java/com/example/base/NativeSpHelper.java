@@ -28,8 +28,8 @@ public class NativeSpHelper {
         return getSharedPreferences().getString("cached_user_token", "");
     }
 
-    public Long getUserId() {
-        return getSharedPreferences().getLong("cached_user_id", -1L);
+    public String getUserId() {
+        return getSharedPreferences().getString("cached_user_id", "");
     }
 
     public String getLocalIP() {

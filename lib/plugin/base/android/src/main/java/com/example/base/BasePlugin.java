@@ -35,7 +35,7 @@ public class BasePlugin implements FlutterPlugin, MethodCallHandler {
         result.success(token);
         break;
       case "getUserId":
-        Long userId = NativeSpHelper.with(application).getUserId();
+        String userId = NativeSpHelper.with(application).getUserId();
         result.success(userId);
         break;
       case "getBaseUrlSetting":

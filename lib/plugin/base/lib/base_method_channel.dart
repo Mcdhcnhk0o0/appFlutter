@@ -21,8 +21,8 @@ class MethodChannelBase extends BasePlatform {
   }
 
   @override
-  Future<int?> getUserId() async {
-    return await methodChannel.invokeMethod<int>("getUserId");
+  Future<String?> getUserId() async {
+    return await methodChannel.invokeMethod<String>("getUserId");
   }
 
   @override

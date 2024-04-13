@@ -42,3 +42,6 @@ flutter:
     androidX: true
     androidPackage: com.example.app_flutter
     iosBundleIdentifier: com.example.appFlutter
+
+  assets:
+    - asset/
