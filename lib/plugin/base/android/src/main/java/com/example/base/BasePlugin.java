@@ -42,6 +42,12 @@ public class BasePlugin implements FlutterPlugin, MethodCallHandler {
         String env = NativeSpHelper.with(application).getBaseUrlSetting();
         result.success(env);
         break;
+      case "getLocalIP":
+        result.success(NativeSpHelper.with(application).getLocalIP());
+        break;
+      case "getRemoteIP":
+        result.success(NativeSpHelper.with(application).getRemoteIP());
+        break;
       default:
         result.notImplemented();
         break;

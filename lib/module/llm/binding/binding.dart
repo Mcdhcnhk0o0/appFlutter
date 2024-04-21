@@ -1,7 +1,7 @@
 
 
 import 'package:app_flutter/get/binding.dart';
-import 'package:app_flutter/module/llm/controller/chat.dart';
+import 'package:app_flutter/module/llm/controller/chat_controller.dart';
 import 'package:get/get.dart';
 
 

@@ -30,4 +30,14 @@ class MethodChannelBase extends BasePlatform {
     return await methodChannel.invokeMethod<String>("getToken");
   }
 
+  @override
+  Future<String?> getLocalIP() async {
+    return await methodChannel.invokeMethod<String>("getLocalIP");
+  }
+
+  @override
+  Future<String?> getRemoteIP() async {
+    return await methodChannel.invokeMethod<String>("getRemoteIP");
+  }
+
 }

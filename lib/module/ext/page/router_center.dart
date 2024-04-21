@@ -1,7 +1,7 @@
 
+import 'package:app_flutter/common/immersive.dart';
 import 'package:app_flutter/get/view.dart';
 import 'package:app_flutter/module/ext/controller/router.dart';
-import 'package:app_flutter/tools/plugin.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_boost/flutter_boost.dart';
@@ -13,24 +13,30 @@ class RouterCenterPage extends ControllerView<RouterController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(),
-      body: Column(
-        children: [
-          pluginBoard(),
-          Expanded(child: routerList())
-        ],
-      ),
+    return ImmersivePage(
+      body: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12),
+        child: Column(
+          children: [
+            pluginBoard(),
+            Expanded(child: routerList())
+          ],
+        ),
+      )
     );
   }
   
   Widget pluginBoard() {
     return Container(
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("UserId: ${controller.userId}"),
-          Text("UserToken: ${controller.token}"),
+          const Text("用户信息", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, height: 2)),
+          Text("UserId: ${controller.userId}", ),
+          Text("UserToken: ${controller.token}", maxLines: 1, overflow: TextOverflow.ellipsis),
           Text("Environment: ${controller.env}"),
+          Container(height: 20),
+          const Text("路由信息", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500, height: 2))
         ],
       ),
     );

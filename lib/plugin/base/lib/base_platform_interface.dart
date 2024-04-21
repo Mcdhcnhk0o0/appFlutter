@@ -27,4 +27,8 @@ abstract class BasePlatform extends PlatformInterface {
 
   Future<String?> getBaseUrlSetting();
 
+  Future<String?> getLocalIP();
+
+  Future<String?> getRemoteIP();
+
 }
